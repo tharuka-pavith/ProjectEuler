@@ -30,12 +30,7 @@ def solution(limit: int = 1000) -> int:
     0
 
     """
-    ls = [i for i in range(0, limit) if i%3==0 or i%5==0]
-    sum = 0
-    for i in ls:
-        sum += i
-    
-    return sum
+    return sum( i for i in range(0, limit) if i%3==0 or i%5==0)
 
 
 if __name__ == "__main__":
