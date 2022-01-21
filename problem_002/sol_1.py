@@ -14,8 +14,8 @@ find the sum of the even-valued terms.
 Solution: 4613732
 
 References :
-- [Wikipedia link to the topic]
-- [Stackoverflow link]
+- Generators tutorial 1: https://realpython.com/introduction-to-python-generators/
+- Python Wiki : https://wiki.python.org/moin/Generators
 
 """
 
