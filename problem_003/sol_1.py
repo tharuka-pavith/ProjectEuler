@@ -50,7 +50,7 @@ def solution(number: int = 600851475143):
     ...
 
     """
-    for i in range(int(sqrt(number)), 100, -1):
+    for i in range(int(sqrt(number)), 1, -1):
         if number % i == 0:
             if is_prime(i): return i
 
