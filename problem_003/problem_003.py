@@ -8,7 +8,7 @@ def isPrime(num): #2,3,5,7
     if (num<=1 or num==4): return False
     if (num==2): return True
 
-    num =math.ceil(math.sqrt(num))
+    num = math.ceil(math.sqrt(num))
     for i in range(2, num ):
         if num%i == 0: return False
     
