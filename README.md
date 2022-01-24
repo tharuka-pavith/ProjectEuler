@@ -5,8 +5,6 @@ Problems are taken from https://projecteuler.net/, the Project Euler. [Problems 
 Project Euler is a series of challenging mathematical/computer programming problems that require more than just mathematical
 insights to solve. Project Euler is ideal for mathematicians who are learning to code.
 
-The solutions will be checked by our [automated testing on GitHub Actions](https://github.com/TheAlgorithms/Python/actions) with the help of [this script](https://github.com/TheAlgorithms/Python/blob/master/scripts/validate_solutions.py). The efficiency of your code is also checked. You can view the top 10 slowest solutions on GitHub Actions logs (under `slowest 10 durations`) and open a pull request to improve those solutions.
-
 
 ## Solution Guidelines
 
