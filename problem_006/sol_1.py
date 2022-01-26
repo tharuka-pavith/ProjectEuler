@@ -27,7 +27,7 @@ def solution(n: int = 100)-> int:
     and the square of the sum.
     """
     # (a+b+c)^2 - (a^2 + b^2 + c^2) = 2(ab + bc + ca)
-    #Therefore, the difference = 2 (ab + bc + ca)
+    # Therefore, the difference = 2 (ab + bc + ca)
     sum = 0
     for i in range(1, n+1):
         for j in range(i+1, n+1):
