@@ -14,9 +14,10 @@ def is_prime(num: int) -> bool:
     Checks whether a num is prime or not.
     Returns True if the number is prime.
     '''
-    if num < 2 or num == 4 or num%2==0 or num%3 == 0: return False
+    if num < 2 or num == 4: return False
     elif num == 2 or num == 3: return True
-
+    elif num%2==0 or num%3 == 0: return False
+    
     n = ceil(sqrt(num))
 
     for i in range(3, n+1, 2):
