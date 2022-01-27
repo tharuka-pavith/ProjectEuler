@@ -14,7 +14,7 @@ def is_prime(num: int) -> bool:
     Checks whether a num is prime or not.
     Returns True if the number is prime.
     '''
-    if num < 2 or num == 4 or num%2==0: return False
+    if num < 2 or num == 4 or num%2==0 or num%3 == 0: return False
     elif num == 2 or num == 3: return True
 
     n = ceil(sqrt(num))
