@@ -19,7 +19,7 @@ References:
 """
 from math import sqrt, ceil
 
-def is_prime(num: int) -> bool:
+def is_prime(num: int) -> bool: ## WRONG
     '''
     Checks whether a num is prime or not.
     Returns True if the number is prime.
