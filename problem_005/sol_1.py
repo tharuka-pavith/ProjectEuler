@@ -32,11 +32,18 @@ def generate_prime_factors(num : int) -> list:
 
 
 
-def solution() -> int:
+def solution(ulimit : int = 20) -> int:
     '''
-    Returns the smallest positive number that is evenly divisible by all of the numbers from 1 to 20
+    Returns the smallest positive number that is evenly divisible by all of the numbers from 1 to ulimit
     '''
-    pass
+    ls_largest_powers = []
+
+    for i in range(2, ulimit+1):
+        ls_factors = generate_prime_factors(i)
+        for tpl in ls_factors:
+            pass
+
+
 
 if __name__ == "__main__":
     print(generate_prime_factors(4))
