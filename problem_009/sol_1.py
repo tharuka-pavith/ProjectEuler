@@ -1,5 +1,5 @@
 '''
-Project Euler Problem 006: https://projecteuler.net/problem=9
+Project Euler Problem 009: https://projecteuler.net/problem=9
 
 ---Special Pythogorean Triplet---
 A Pythagorean triplet is a set of three natural numbers, a < b < c, for which,
