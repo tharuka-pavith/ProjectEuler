@@ -27,18 +27,19 @@ class Matrix:
 
 
 if __name__ == "__main__":
-    fp = open('problem_011/data.txt')
-    matrix = []
-    for line in fp:
-        str_row = line.replace('\n', '').split(" ")
-        matrix.append(list(int(i) for i in str_row))
+    # fp = open('problem_011/data.txt')
+    # matrix = []
+    # for line in fp:
+    #     str_row = line.replace('\n', '').split(" ")
+    #     matrix.append(list(int(i) for i in str_row))
     
-    fp.close()
+    # fp.close()
 
-    mat = Matrix(matrix)
+    # mat = Matrix(matrix)
 
-    res = mat.get_all_4by4_mat()
+    # res = mat.get_all_4by4_mat()
 
-    print(res[-1])
+    # print(res[-1])
+    pass
 
 
