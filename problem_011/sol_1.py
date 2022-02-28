@@ -37,19 +37,11 @@ References [Optional]:
 - [Stackoverflow link]
 
 """
+def get_vertical_max(mat):
+    pass #TODO
 
-def solution()-> int:
-    fp = open('problem_011/data.txt')
-    matrix = []
-    for line in fp:
-        str_row = line.replace('\n', '').split(" ")
-        matrix.append(list(int(i) for i in str_row))
-
-    #print(matrix)
-    fp.close()
-
+def get_horizontal_max(matrix) -> int:
     max_product = 1
-
     for row in matrix:
         for i in range(0, len(row)-3):
             product = row[i] * row[i+1] * row[i+2] * row[i+3]
@@ -57,5 +49,21 @@ def solution()-> int:
             max_product = product if product > max_product else max_product
     return (max_product)
 
+def get_diagonal_max(mat):
+    pass #TODO
+
+def solution()-> int:
+    fp = open('problem_011/data.txt')
+    matrix = []
+    for line in fp:
+        str_row = line.replace('\n', '').split(" ")
+        matrix.append(list(int(i) for i in str_row))
+    
+    fp.close()
+    if len(matrix)!=20 or len(matrix[0])!=20:
+        raise IndexError("invalid matrix size")
+
+    
+
 if __name__ == "__main__":
-    print(f'{solution()=}')
+    print(f'{solution()= }')
