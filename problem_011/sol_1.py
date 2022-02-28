@@ -32,38 +32,60 @@ What is the greatest product of four adjacent numbers in the same direction
 (up, down, left, right, or diagonally) 
 in the 20×20 grid?
 
+Solution : 70600674 Done! TODO: complete comments!!!
+
 References [Optional]:
 - [Wikipedia link to the topic]
 - [Stackoverflow link]
 
 """
+from matrix.Matrix import Matrix
+
 def get_vertical_max(mat):
-    pass #TODO
+    max = 0
+    for i in range(len(mat[0])):
+        product = mat[0][i] * mat[1][i] * mat[2][i] * mat[3][i]
+        if product > max: max = product
+    return max
 
 def get_horizontal_max(matrix) -> int:
-    max_product = 1
-    for row in matrix:
-        for i in range(0, len(row)-3):
-            product = row[i] * row[i+1] * row[i+2] * row[i+3]
-
-            max_product = product if product > max_product else max_product
-    return (max_product)
+    max = 0
+    for r in matrix:
+        product = 1
+        for i in r:
+            product = product * i
+        if product > max: max = product
+    return max
 
 def get_diagonal_max(mat):
-    pass #TODO
+    product_1 = 1
+    product_2 = 1
+    for i in range(4):
+        product_1 = product_1 * mat[i][i]
+        product_2 = product_2 * mat[i][3-i]
+    return max(product_1,product_2)
 
 def solution()-> int:
-    fp = open('problem_011/data.txt')
-    matrix = []
+    fp = open('data.txt')
+    mat = []
     for line in fp:
         str_row = line.replace('\n', '').split(" ")
-        matrix.append(list(int(i) for i in str_row))
-    
+        mat.append(list(int(i) for i in str_row))
     fp.close()
-    if len(matrix)!=20 or len(matrix[0])!=20:
-        raise IndexError("invalid matrix size")
 
-    
+    m = Matrix(mat)
+    sub_mats = m.get_all_4by4_mat()
+    final_max = 0
+    for m in sub_mats:
+        h_max = get_horizontal_max(m)
+        v_max = get_vertical_max(m)
+        d_max = get_diagonal_max(m)
+        all_max = max(h_max, v_max, d_max)
+        if all_max > final_max: final_max = all_max
+
+    return final_max
+
 
 if __name__ == "__main__":
     print(f'{solution()= }')
+    #solution()
