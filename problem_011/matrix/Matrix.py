@@ -5,6 +5,9 @@ class Matrix:
         self.matrix = mat
 
     def get_all_4by4_mat(self) -> list:
+        '''
+        Returns all 4 by 4 matrices as a list
+        '''
         n = self.rows
         m = self.cols
         mat = self.matrix
