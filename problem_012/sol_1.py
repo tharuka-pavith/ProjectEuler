@@ -28,15 +28,25 @@ References [Optional]:
 ...
 
 """
+def solution(n: int = 500) -> int: #This function takes a lot of time to calculate solution!
+    '''
+    Returns the value of the first triangle number to have over five hundred divisors
+    >>> solution(5)
+    28
+    '''
+    tri_num = 1
+    nat_num = 1
+    count = 0
 
-def helper1():
-    """
-    """
-
-def solution():
-    """
-    """
+    while count < n:
+        count = 0
+        nat_num += 1
+        tri_num += nat_num
+        for i in range(1, tri_num+1):
+            if tri_num % i == 0: count += 1
+    
+    return tri_num
 
 
 if __name__ == "__main__":
-    pass
+    print(f'{solution(5) = }')
