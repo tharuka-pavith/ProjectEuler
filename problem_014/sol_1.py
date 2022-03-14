@@ -18,13 +18,16 @@ Which starting number, under one million, produces the longest chain?
 
 NOTE: Once the chain starts the terms are allowed to go above one million.
 
-Solution: TODO
+Solution: 837799 [got the solution but algorithm is slow]
 
 References [Optional]:
 - [Wikipedia link to the topic]
 - [Stackoverflow link]
 """
-def generate_collatz(n: int = 1_000_000)-> None:
+def generate_collatz(n: int = 13)-> None:
+    '''Generates collatz sequence
+    
+    n   starting number'''
     while n != 1:
         if n % 2 == 0: #even
             n = n // 2
@@ -34,11 +37,20 @@ def generate_collatz(n: int = 1_000_000)-> None:
             yield n
     return None
 
-def solution(n: int = 10) -> int:
-    pass
+def solution() -> int:
+    max_count = 0
+    strt_num = 0
+    for num in range(1_000_000, 1, -1):
+        count = 0
+        for i in generate_collatz(num):
+            count += 1
+        if count > max_count:
+            max_count = count
+            strt_num = num
+
+    return strt_num
 
 
 if __name__ == "__main__":
-    for i in generate_collatz(13):
-        print(i)
+    print(f'{solution()= }')
     
